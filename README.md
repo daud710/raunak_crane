@@ -162,4 +162,5 @@ deployment for it.
   a completed job, the team), drop the files into `frontend/public/images/` or upload them
   through the admin panel — the site will pick them up the same way.
 #   c r e a n  
+ #   r a u n a k _ c r a n e  
  
