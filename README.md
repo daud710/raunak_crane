@@ -161,3 +161,5 @@ deployment for it.
   around images I don't have rights to redistribute. If you'd like extra photography (yard,
   a completed job, the team), drop the files into `frontend/public/images/` or upload them
   through the admin panel — the site will pick them up the same way.
+#   c r e a n  
+ 
