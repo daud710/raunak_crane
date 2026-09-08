@@ -9,7 +9,7 @@ export const DEFAULT_SETTINGS = {
   phone1: "7782005426",
   phone2: "9653911627",
   whatsapp_number: "917782005426",
-  instagram_url: "https://instagram.com/raunakcraneservice",
+  instagram_url: "https://instagram.com/raunak_crean_service",
   facebook_url: "",
   address: "Hardiya Mod, Siwan, Bihar 841226",
   map_query: "Hardiya Mod, Siwan, Bihar",
