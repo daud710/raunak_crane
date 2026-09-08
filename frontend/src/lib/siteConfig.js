@@ -8,7 +8,7 @@ export const site = {
   phone1: env.VITE_PHONE_1 || "7782005426",
   phone2: env.VITE_PHONE_2 || "9653911627",
   whatsappNumber: env.VITE_WHATSAPP_NUMBER || "917782005426",
-  instagramUrl: env.VITE_INSTAGRAM_URL || "https://instagram.com/raunakcraneservice",
+  instagramUrl: env.VITE_INSTAGRAM_URL || "https://instagram.com/raunak_crean_service",
   address: env.VITE_ADDRESS || "Hardiya Mod, Siwan, Bihar 841226",
   mapQuery: env.VITE_MAP_QUERY || "Hardiya Mod, Siwan, Bihar",
   yearsInService: 9,
@@ -38,6 +38,8 @@ export const telLink = (number) => `tel:+91${number.replace(/\D/g, "").slice(-10
 export const normalizeInstagramUrl = (raw) => {
   let value = (raw || "").trim();
   if (!value) return "";
+  const compact = value.replace(/^@/, "").replace(/^(https?:\/\/)?(www\.)?instagram\.com\/?/i, "").replace(/\/+$/, "");
+  if (compact.toLowerCase() === "raunakcraneservice") return "https://instagram.com/raunak_crean_service";
   value = value.replace(/^@/, "");
   if (!/^https?:\/\//i.test(value)) {
     value = value.replace(/^(www\.)?instagram\.com\/?/i, "");
