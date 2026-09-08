@@ -150,7 +150,7 @@ create table if not exists public.site_settings (
   phone1 text not null default '7782005426',
   phone2 text not null default '9653911627',
   whatsapp_number text not null default '917782005426',
-  instagram_url text not null default 'https://instagram.com/raunakcraneservice',
+  instagram_url text not null default 'https://instagram.com/raunak_crean_service',
   facebook_url text not null default '',
   address text not null default 'Hardiya Mod, Siwan, Bihar 841226',
   map_query text not null default 'Hardiya Mod, Siwan, Bihar',
@@ -191,7 +191,7 @@ insert into public.site_settings (
   years_in_service, service_areas, about, services
 ) values (
   1, 'Raunak Crane Service', 'Hydra Crane, Mobile Crane & Vehicle Towing',
-  '7782005426', '9653911627', '917782005426', 'https://instagram.com/raunakcraneservice',
+  '7782005426', '9653911627', '917782005426', 'https://instagram.com/raunak_crean_service',
   'Hardiya Mod, Siwan, Bihar 841226', 'Hardiya Mod, Siwan, Bihar',
   9,
   '["Siwan Town","Hardiya Mod","Maharajganj","Guthni","Darauli","Basantpur","Andar","Nearby NH-227 stretch"]',
