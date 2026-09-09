@@ -26,13 +26,13 @@ export default function SEO({ title, description, path = "/" }) {
     setMeta("keywords", "hydra crane service Siwan, crane hire Siwan, mobile crane Siwan, vehicle towing Siwan, crane service Hardiya Mod");
     setMeta("og:title", fullTitle, "property");
     setMeta("og:description", description, "property");
-    setMeta("og:url", `https://www.raunakcraneservice.in${path}`, "property");
+    setMeta("og:url", `https://raunakcrane.xyz${path}`, "property");
     setMeta("og:site_name", settings.name, "property");
     setMeta("og:locale", "en_IN", "property");
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", fullTitle);
     setMeta("twitter:description", description);
-    setMeta("twitter:image", "https://www.raunakcraneservice.in/images/hydra-crane-1.jpg");
+    setMeta("twitter:image", "https://raunakcrane.xyz/images/hydra-crane-1.jpg");
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -40,7 +40,7 @@ export default function SEO({ title, description, path = "/" }) {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", `https://www.raunakcraneservice.in${path}`);
+    canonical.setAttribute("href", `https://raunakcrane.xyz${path}`);
 
     let ld = document.getElementById("local-business-ld");
     if (!ld) {
@@ -52,12 +52,12 @@ export default function SEO({ title, description, path = "/" }) {
     ld.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://www.raunakcraneservice.in/#business",
+      "@id": "https://raunakcrane.xyz/#business",
       name: settings.name,
       description:
         "Hydra crane hire, mobile crane hire, and vehicle towing & recovery serving Siwan, Bihar, 24 hours a day.",
-      url: "https://www.raunakcraneservice.in/",
-      image: "https://www.raunakcraneservice.in/images/hydra-crane-1.jpg",
+      url: "https://raunakcrane.xyz/",
+      image: "https://raunakcrane.xyz/images/hydra-crane-1.jpg",
       telephone: `+91${settings.phone1}`,
       serviceType: [
         "Hydra crane hire",
