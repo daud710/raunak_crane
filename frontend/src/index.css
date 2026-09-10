@@ -357,8 +357,8 @@ section { padding: 88px 0; }
   overflow: hidden;
   position: relative;
 }
-.vehicle-photo img,
-.vehicle-photo picture {
+.vehicle-photo > img,
+.vehicle-photo > picture {
   position: absolute;
   inset: 0;
   display: block;
@@ -369,8 +369,8 @@ section { padding: 88px 0; }
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
-.vehicle-photo img.active-photo,
-.vehicle-photo picture.active-photo {
+.vehicle-photo > img.active-photo,
+.vehicle-photo > picture.active-photo {
   opacity: 1;
 }
 .vehicle-photo-dots {
