@@ -17,21 +17,37 @@ export default function VehicleCard({ vehicle }) {
     return () => clearInterval(id);
   }, [photos.length]);
 
-  const current = photos[index];
-  const isLocal = current.url?.startsWith("/images/");
-
+  // Render every photo up front (stacked, only the active one visible) so
+  // each image is fetched once and cached by the browser. Rotating just
+  // toggles which one is visible instead of swapping `src`, which used to
+  // restart the download every 3s and meant slow mobile connections often
+  // never finished loading a photo before the next rotation cancelled it.
   return (
     <article className="vehicle-card">
       <div className="vehicle-photo">
-        {isLocal ? (
-          <LazyImage
-            src={current.url}
-            webpSrc={current.url.replace(/\.jpg$/, ".webp")}
-            alt={vehicle.name}
-          />
-        ) : (
-          <img src={current.thumb || current.url} alt={vehicle.name} loading="lazy" decoding="async" />
-        )}
+        {photos.map((photo, i) => {
+          const isLocal = photo.url?.startsWith("/images/");
+          const isActive = i === index;
+          return isLocal ? (
+            <LazyImage
+              key={photo.url || i}
+              src={photo.url}
+              webpSrc={photo.url.replace(/\.jpg$/, ".webp")}
+              alt={vehicle.name}
+              eager={i === 0}
+              className={isActive ? "active-photo" : ""}
+            />
+          ) : (
+            <img
+              key={photo.url || i}
+              src={photo.thumb || photo.url}
+              alt={vehicle.name}
+              loading={i === 0 ? "eager" : "lazy"}
+              decoding="async"
+              className={isActive ? "active-photo" : ""}
+            />
+          );
+        })}
         {photos.length > 1 && (
           <div className="vehicle-photo-dots">
             {photos.map((_, i) => (

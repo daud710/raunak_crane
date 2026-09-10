@@ -355,7 +355,22 @@ section { padding: 72px 0; }
   overflow: hidden;
   position: relative;
 }
-.vehicle-photo img { width: 100%; height: 100%; object-fit: cover; }
+.vehicle-photo img,
+.vehicle-photo picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.vehicle-photo img.active-photo,
+.vehicle-photo picture.active-photo {
+  opacity: 1;
+}
 .vehicle-photo-dots {
   position: absolute;
   bottom: 10px;
