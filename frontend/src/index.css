@@ -1,21 +1,21 @@
 /* ── Design tokens ──────────────────────────────────────────── */
 :root {
   --white: #ffffff;
-  --surface: #f3f4f1;
-  --surface-2: #ececea;
-  --ink: #191d21;
-  --ink-soft: #4a5157;
-  --steel: #1b2430;
-  --steel-soft: #2a3541;
-  --amber: #e2661b;
-  --amber-dark: #b74f11;
-  --hazard: #f5b700;
-  --border: #e0e1dc;
-  --border-dark: #33404d;
-  --radius: 10px;
+  --surface: #e7e2d6;
+  --surface-2: #ded7c6;
+  --ink: #1c1917;
+  --ink-soft: #5a5347;
+  --steel: #211d19;
+  --steel-soft: #332c25;
+  --amber: #a6391e;
+  --amber-dark: #7c2a16;
+  --hazard: #c6952e;
+  --border: #d6cfbe;
+  --border-dark: #453b30;
+  --radius: 6px;
   --max: 1180px;
-  --font-display: "Oswald", "Arial Narrow", sans-serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -58,15 +58,16 @@ button {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.12;
+  font-weight: 700;
+  line-height: 1.05;
   margin: 0 0 0.5em;
   letter-spacing: 0.2px;
+  text-transform: uppercase;
 }
 
-h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; }
-h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); }
-h3 { font-size: 1.25rem; }
+h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 4vw, 2.9rem); }
+h3 { font-size: 1.4rem; text-transform: none; }
 
 p { margin: 0 0 1em; color: var(--ink-soft); max-width: 62ch; }
 
@@ -79,9 +80,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); max-width: 62ch; }
   .container { padding: 0 16px; }
 }
 
-section { padding: 72px 0; }
+section { padding: 88px 0; }
 @media (max-width: 720px) {
-  section { padding: 48px 0; }
+  section { padding: 56px 0; }
 }
 
 /* Recurring "hazard stripe" bar — the one bold, load-bearing motif on the site,
@@ -102,8 +103,8 @@ section { padding: 72px 0; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 13px 22px;
-  border-radius: 6px;
+  padding: 13px 24px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 0.98rem;
   text-decoration: none;
@@ -270,7 +271,7 @@ section { padding: 72px 0; }
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  box-shadow: 0 24px 48px -24px rgba(27, 36, 48, 0.35);
+  box-shadow: 0 24px 48px -24px rgba(33, 29, 25, 0.4);
 }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -301,7 +302,7 @@ section { padding: 72px 0; }
 /* ── Section headers ────────────────────────────────────────── */
 .section-head {
   max-width: 640px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 
@@ -346,6 +347,7 @@ section { padding: 72px 0; }
 .vehicle-card {
   background: var(--white);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--amber);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -459,7 +461,7 @@ section { padding: 72px 0; }
   color: var(--white);
 }
 .band-dark h2, .band-dark h3 { color: var(--white); }
-.band-dark p { color: #c3ccd4; }
+.band-dark p { color: #cdc4b3; }
 .band-dark .container { position: relative; }
 
 .area-list {
@@ -475,7 +477,7 @@ section { padding: 72px 0; }
   border-radius: 999px;
   padding: 7px 16px;
   font-size: 0.92rem;
-  color: #dfe4e8;
+  color: #e3dccb;
 }
 
 /* ── About page ─────────────────────────────────────────────── */
@@ -597,7 +599,7 @@ section { padding: 72px 0; }
 /* ── Footer ─────────────────────────────────────────────────── */
 .footer {
   background: var(--steel);
-  color: #c3ccd4;
+  color: #cdc4b3;
   padding: 56px 0 28px;
 }
 .footer h4 {
@@ -614,7 +616,7 @@ section { padding: 72px 0; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 .footer a {
-  color: #c3ccd4;
+  color: #cdc4b3;
   text-decoration: none;
   display: block;
   padding: 4px 0;
